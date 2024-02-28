@@ -1,0 +1,111 @@
+.post-list-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.post-card {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.post-content, .post-tags, .post-meta {
+  margin-bottom: 10px;
+}
+
+.post-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.post-actions {
+  display: flex;
+}
+
+.action-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  margin-left: 10px;
+}
+
+.icon {
+  fill: #007bff;
+  width: 20px;
+  height: 20px;
+}
+
+.icon:hover {
+  fill: #0056b3;
+}
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 15px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.action-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action-button i {
+  color: #007bff;
+  font-size: 18px;
+}
+
+.action-button:hover i {
+  color: #0056b3;
+}
+.post-item {
+  border-bottom: none;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #ffffff; 
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out,
+}
+
+.post-item:hover {
+  transform: translateY(-5px); 
+}
+
+
+
+.icon-button:hover {
+  color: #0056b3; 
+}

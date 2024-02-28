@@ -1,0 +1,75 @@
+type Query {
+    users(page: Int, limit: Int, sortBy: String): UserPage
+    user(id: ID!): User
+    posts(page: Int, limit: Int, sortBy: String): PostPage
+    postsByUser(userId: ID!, page: Int, limit: Int): PostPage
+    postsByTag(tag: String!, page: Int, limit: Int): PostPage
+    post(id: ID!): Post
+    comments(page: Int, limit: Int): CommentPage
+    commentsByPost(postId: ID!, page: Int, limit: Int): CommentPage
+    commentsByUser(userId: ID!, page: Int, limit: Int): CommentPage
+   # tags: [Tag]
+}
+
+type Mutation {
+    createUser(firstName: String!, lastName: String!, email: String!): User
+    updateUser(id: ID!, firstName: String, lastName: String): User
+    deleteUser(id: ID!): ID
+    createPost(content: String!, userId: ID!): Post
+    updatePost(id: ID!, content: String!): Post
+    deletePost(id: ID!): ID
+    createComment(content: String!, postId: ID!, userId: ID!): Comment
+    deleteComment(id: ID!): ID
+}
+
+type User {
+    id: ID!
+    firstName: String!
+    lastName: String!
+    email: String!
+    registrationDate: String
+    posts: [Post]
+}
+
+type UserPage {
+    data: [User]
+    total: Int
+    page: Int
+    limit: Int
+}
+
+type Post {
+    id: ID!
+    content: String!
+    creationDate: String
+    user: User
+    comments: [Comment]
+}
+
+type PostPage {
+    data: [Post]
+    total: Int
+    page: Int
+    limit: Int
+}
+
+type Comment {
+    id: ID!
+    content: String!
+    creationDate: String
+    user: User
+    post: Post
+}
+
+type CommentPage {
+    data: [Comment]
+    total: Int
+    page: Int
+    limit: Int
+}
+
+#type Tag {
+    #id: ID!
+    #name: String!
+ #   posts: [Post]
+#}
